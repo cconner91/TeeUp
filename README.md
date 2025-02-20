@@ -30,22 +30,22 @@ Players may also choose a custom game or customize the pre-set game chosen.
 ## Scoring Styles
 
 ### 1. Stroke Play
-  a. 2-Man
-  b. 3-Man
-  c. 4-Man
-  d. Custom Group
+    a. 2-Man
+    b. 3-Man
+    c. 4-Man
+    d. Custom Group
 
 ### 2. Match Play 
-  a. 2-Man
-  b. 3-Man
-  c. 4-Man
-  d. Custom Group
+    a. 2-Man
+    b. 3-Man
+    c. 4-Man
+    d. Custom Group
 
 ### 3. Points 
-  a. 2-Man
-  b. 3-Man
-  c. 4-Man
-  d. Custom Group
+    a. 2-Man
+    b. 3-Man
+    c. 4-Man
+    d. Custom Group
 
  ________________________
 
