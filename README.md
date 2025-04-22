@@ -100,7 +100,7 @@ TeeUp will need to utilize the following data sets:
 
 1. Database storing each golf game, including the rules, scoring, player criteria.
      -This may be a custom database I create
-     -There will need to be flags on each golf game, primarily for number of players allowed. This way when a user indicates the total players, it will only display the appropriate          games that meet the criteria
+     -There will need to be flags on each golf game, primarily for number of players allowed. This way when a user indicates the total players, it will only display the appropriate games that meet the criteria
    
 2. User Database
      - This will be have components of an interactive social application where users can create profiles and add other users and create groups
@@ -109,7 +109,7 @@ TeeUp will need to utilize the following data sets:
      - Course Names and Locations
      - Course Score Card - So users can input scores in the application and have it align with the holes of the course
      - Course Rating - USGA Course Rating is an evaluation of the difficulty of a golf course for scratch golfers. (More specifically, the number is an estimate of the average scores of the best 50-percent of rounds played by scratch golfers at         the course being rated.)
-       Course rating is very easy to understand because it is expressed in strokes. A par-72 course that is easy might have a course rating of 68.9; one that is difficult might have a course rating of 74.5. That means that a scratch golfer              should be expected to average 68.9 strokes in his better rounds at the easier course; and 74.5 at the more difficult one.
+       Course rating is very easy to understand because it is expressed in strokes. A par-72 course that is easy might have a course rating of 68.9; one that is difficult might have a course rating of 74.5. That means that a scratch golfer              should be expected to average 68.9 strokes in his better rounds at the easier              course; and 74.5 at the more difficult one.
      - Course Slope Rating - The slope rating of a golf course is a measurement of it's relative difficulty for a bogey golfer compared to a scratch golfer. This value ranges from 55 (least difficult) to 155 (most difficult)
 
 To put it another way: USGA Course Rating tells the best golfers how hard a golf course actually plays; USGA Slope Rating indicates how much harder the course plays for "regular" (meaning not among the best) golfers.
@@ -202,8 +202,6 @@ In this section, live status of the where the match stands, the current wager ba
 _______________________________________________________________
 
 
-
-
 # Pricing
 
 
@@ -211,10 +209,7 @@ Free App
 
 Pro 
 
-
 _______________________________________________________________
-
-
 
 
 # Tech Stack
@@ -225,4 +220,13 @@ _______________________________________________________________
 
 ### Backend: ??
 
-    
+_______________________________________________________________
+
+# TO DO
+
+
+1. Define the rules for each golf game so we can build the logic for scoring as well as ensuring only games which meet player number criteria populate appropriately.
+2. Find a golf course database where we will pull the course information - This will need to contain the following:
+       a. Score Card for course
+       b. Slope rating and Course rating for each tee as well as course length from each tee
+3. Write the logic for scoring
