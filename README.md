@@ -1,5 +1,10 @@
 # TeeUp
 
+## FIGMA USER FLOWS AND USER STORIES
+
+https://www.figma.com/board/WcUu61gcBbnunnmAfSoxuP/User-Flows---Stories--Community-?node-id=0-1&t=yO5IvsVJvJYLwUBo-1
+
+
 ## Summary
 
 Introducing TeeUp, the ultimate golf companion designed to enhance your game and connect you with fellow golfers! Whether you're a casual player or a seasoned pro, our app offers a seamless experience for organizing and enjoying golf games.
