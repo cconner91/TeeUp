@@ -1,0 +1,555 @@
+#Golf Game Database
+
+## Golf Game 
+## Number of Players Allowed
+## Game Description & Scoring Rules
+## GamePlay Format(s)
+## Player Matchup Format(s)
+## Scoring Format(s)
+## Money Game
+
+
+## Scoring Formats
+These define how players or teams are scored:
+
+Stroke Play: Total number of strokes over 18 holes.
+Match Play:	Holes are won/lost/tied based on individual hole performance.	
+Points-Based: Players earn points based on hole performance.	
+
+
+
+## GamePlay Formats
+These define how players or teams are scored:
+
+Individual Play: 	Each player plays their own ball throughout.
+Best Ball (Four Ball): 	Each player plays their own ball, best score counts
+Scramble: All players hit, best shot is selected, all play from there.	Scramble, Shamble (partial)
+Alternate Shot (Foursomes):	Teammates alternate shots with a single ball.	Alternate Shot
+Modified/Hybrid Formats:	Combination of multiple play styles.
+
+
+
+## Player Matchup Formats
+
+Solo
+H2H: Head to Head - 1v1, 1v1v1, 1v1v1v1
+H2H Hybrid: Head to Head in which 1 player is competing against a team (1v2)
+Team Play: Any team against another team where the first number indicates the amount of players on your team and the second number represents the number of players on the opposing team - 2v2, 4v4, 4(solo)
+Modified/Hybrid Formats:	Combination of multiple match setup formats.
+
+
+## Scoring
+
+Scoring can be straight up OR handicapped. If handicapped, each player that wishes to have their scoring handicapped will need to have their GHIN handicap input, either manually or from their official GHIN. With this, the application will automatically calculate the scoring based off of that. 
+
+## Money Game
+
+Users will be able to input their wagers into their match and the app will then keep track and determine the money owed at the end of the match based on the scoring rules assigned.
+
+__________________________________________________
+
+
+The games below will serve as the "database" of different pre-set games available to users. It will contain the name, how many players it can be played with, the description of the game, the rules of the game and the formats in which the game can be played. Each of the games (unless otherwise indicated) can have players' handicaps
+factored into the scoring.
+
+
+## 1. Basic Stroke Play (Medal Play)
+
+### NUMBER OF PLAYERS
+(1+)
+
+### DESCRIPTION & SCORING RULES
+Stroke play is a traditional scoring format where the total number of strokes determines the winner.
+
+On each hole players will compete to earn the lowest score. At the end of the match, whichever player or team has the lowest score (lowest number of strokes) is considered the winner. 
+
+### PLAYER MATCHUP FORMAT(S)
+  Solo
+  H2H 
+  H2H Hybrid 
+  Team Play 
+  Modified/Hybrid
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Shamble
+  Alternate Shot
+  Modified/Hybrid Formats
+
+
+### SCORING FORMAT(S)
+  Stroke Play
+
+_________________________________________________
+
+
+## 2. Match Play - Singles
+
+### NUMBER OF PLAYERS
+2+
+
+### DESCRIPTION & SCORING RULES
+In Match Play, players (or teams) compete hole by hole rather than by total strokes. Players (or teams) are considered the "winner" when they are up on their opponent(s) by more holes than there are holes left to play. 
+
+-Each hole will result in a "win" or a "push" by the player (or team).
+-If a player (or team) wins the first hole of the match, they will be considered 1 Up (1U) and the player (or team) who loses that hole would be considered 1 Down (1D).
+-If both players (or teams) tie a hole, meaning they receive the same total score on that hole, the hole will be considered a "push".
+-If a player (or team) is up by more holes than there is left to play in the match, they will be considered the winner. Depending on the hole number in which this occurs, the results will be shown as ("Holes Up & Holes Left to Play"). For example if
+  a Player A is 5U on Player B once they've reached the 15th hole, the match would be considered over with Player A having won 5&4. There are up by 5 holes with only 4 holes remaining (assuming this was a standard 18 hole match).
+-Handicapped scoring (if enabled) can alter the number of strokes it takes to win a given hole.
+
+### PLAYER MATCHUP FORMAT(S)
+  H2H 
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+
+
+### SCORING FORMAT(S)
+  Match Play
+
+
+_________________________________________________
+
+
+
+## 3. Match Play - Team
+
+### NUMBER OF PLAYERS
+4+
+
+### DESCRIPTION & SCORING RULES
+In Match Play, players (or teams) compete hole by hole rather than by total strokes. Players (or teams) are considered the "winner" when they are up on their opponent(s) by more holes than there are holes left to play. 
+
+-Each hole will result in a "win" or a "push" by the player (or team).
+-If a player (or team) wins the first hole of the match, they will be considered 1 Up (1U) and the player (or team) who loses that hole would be considered 1 Down (1D).
+-If both players (or teams) tie a hole, meaning they receive the same total score on that hole, the hole will be considered a "push".
+-If a player (or team) is up by more holes than there is left to play in the match, they will be considered the winner. Depending on the hole number in which this occurs, the results will be shown as ("Holes Up & Holes Left to Play"). For example if
+  a Player A is 5U on Player B once they've reached the 15th hole, the match would be considered over with Player A having won 5&4. There are up by 5 holes with only 4 holes remaining (assuming this was a standard 18 hole match).
+-Handicapped scoring (if enabled) can alter the number of strokes it takes to win a given hole.
+
+### PLAYER MATCHUP FORMAT(S)
+  H2H Hybrid 
+  Team Play 
+  Modified/Hybrid
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Shamble
+  Alternate Shot
+  Modified/Hybrid Formats
+
+
+### SCORING FORMAT(S)
+  Match Play
+
+__________________________________
+
+## 4. Basic Scramble
+
+### NUMBER OF PLAYERS
+(4+)
+
+### DESCRIPTION & SCORING RULES
+A team format where all players hit each shot, then choose the best shot and all play their next shot from that spot.
+
+After teeing off, the team selects the best ball and everyone hits from that spot. Repeat until the hole is completed.
+
+### PLAYER MATCHUP FORMAT(S) 
+  Team Play
+  Modified/Hybrid
+
+### GAMEPLAY FORMAT(S)
+  Scramble
+
+
+### SCORING FORMAT(S)
+  Match Play 
+  Stroke Play 
+
+__________________________________
+
+## 5. Basic Shamble
+
+### NUMBER OF PLAYERS
+(4+)
+
+### DESCRIPTION & SCORING RULES
+
+A hybrid of scramble and best ball.
+
+All players tee off, pick the best drive, then play individual balls from there. Best score counts (or total scores).
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  Team Play
+  Modified/Hybrid
+
+### GAMEPLAY FORMAT(S)
+  Shamble
+  Modified/Hybrid Formats
+
+
+### SCORING FORMAT(S)
+  Match Play 
+  Stroke Play 
+
+
+__________________________________
+
+## 6. Stableford
+
+### NUMBER OF PLAYERS
+2+ (Commonly 2-4)
+
+### DESCRIPTION & SCORING RULES
+
+Stableford uses a points-based scoring system that rewards performance on each hole.
+
+Players (or teams) earn points based on strokes per hole (e.g., par = 2, birdie = 3, bogey = 1, etc.). Highest point total wins.
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  H2H
+  H2H Hybrid
+  Team Play
+  Modified/Hybrid Matchup
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Alternate Shot
+  Modified/Hybrid Gameplay
+  Shamble
+
+### SCORING FORMAT(S)
+  Points-Based
+
+
+__________________________________
+
+## 7. Nassau
+
+### NUMBER OF PLAYERS
+2+
+
+### DESCRIPTION & SCORING RULES
+
+Nassau is a popular game which consists of a three-part match play bet — front 9, back 9, and total score.
+
+Each of the three segments is scored separately, giving three chances to win. Often includes additional side bets.
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  H2H 
+  H2H Hybrid 
+  Team Play 
+  Modified/Hybrid Matchup
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Alternate Shot
+  Modified/Hybrid Gameplay
+
+
+### SCORING FORMAT(S)
+  Stroke Play
+  Match Play
+
+
+________________________________________
+
+## 8. Skins
+
+### NUMBER OF PLAYERS
+2+
+
+### DESCRIPTION & SCORING RULES
+Each hole is worth a "skin" (dollar value). A player must win the hole outright to claim the skin.
+
+If two or more players tie a hole, the skin carries over to the next. Most skins at the end wins.
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  H2H 
+  H2H Hybrid 
+  Team Play 
+  Modified/Hybrid Matchup
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Alternate Shot
+  Modified/Hybrid Gameplay
+
+
+### SCORING FORMAT(S)
+  Match Play
+
+
+
+________________________________________
+
+## 9. Wolf
+
+### NUMBER OF PLAYERS
+3-4
+
+### DESCRIPTION & SCORING RULES
+Wolf is a rotating-player format where each player gets a turn as the “Wolf” and has the power to choose partners — or go it alone — on each hole. The game blends match play, strategy, and alliances, and is great for 4 players.
+
+Players rotate as the “Wolf” each hole. After drives, the Wolf chooses whether to play solo or pick a partner for that hole.
+
+Before teeing off, establish a playing order: Player A, B, C, D
+
+This order rotates each hole, so everyone gets a turn as the Wolf
+
+Example Rotation:
+
+  Hole 1: A is Wolf
+  Hole 2: B is Wolf
+  Hole 3: C is Wolf
+  Hole 4: D is Wolf
+  Hole 5: back to A, and so on
+
+All 4 players tee off in order, while The Wolf watches the other players’ tee shots.
+
+After each drive (in traditional rules), the Wolf must immediately decide whether to pick that player as a partner for the hole.
+
+If the Wolf skips a player, they cannot go back and choose them later.
+
+After the final tee shot, if the Wolf hasn’t chosen a partner, they can:
+
+Choose the final player, or
+
+Go Lone Wolf and play 1 vs 3
+
+###💰 Scoring
+Scoring can be done in points or for money. A common version is Nassau-style or per-hole betting.
+
+Teams & Points
+
+Wolf + Chosen Partner vs Other 2:
+  If the Wolf's team wins the hole: each wins 1 point
+  If they lose: the opposing team each gets 1 point
+  Tie: No points or everyone gets 0.5
+
+Lone Wolf (1 vs 3):
+  If the Wolf wins: gets 3 points
+  If the Wolf loses: each of the 3 opponents gets 1 point
+
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  Modified/Hybrid Formats:
+
+
+### GAMEPLAY FORMAT(S)
+ Modified/Hybrid Gameplay
+
+
+### SCORING FORMAT(S)
+  Points-Based
+
+
+________________________________________
+
+## 10. Bingo Bango Bongo
+
+### NUMBER OF PLAYERS
+3-4
+
+### DESCRIPTION & SCORING RULES
+Bingo Bango Bongo is a points-based golf game where players earn points on each hole based on three specific achievements — being first, being closest, and finishing first. 
+It's a great equalizer for mixed skill levels because it's not just about the lowest score.
+
+Points: 
+1 for first on green (“bingo”)
+1 for closest to pin when all on green (“bango”) 
+1 for first to hole out (“bongo”).
+
+3 points per hole x 18 holes = 54 total points available
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  Modified/Hybrid Matchup
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+
+
+### SCORING FORMAT(S)
+  Points-Based
+
+
+
+
+
+________________________________________
+
+## 11. Vegas
+
+### NUMBER OF PLAYERS
+4
+
+### DESCRIPTION & SCORING RULES
+Vegas is a team golf betting game where two-player teams compete by combining their scores into a two-digit number on each hole. The team with the lower combined number wins the hole. What makes it unique (and sometimes brutal) 
+is how the scores are combined — not added, but joined side-by-side.
+
+On each hole, each player plays their own ball (stroke play).
+
+After the hole:
+
+Combine each team's two scores into a two-digit number, with the lower score going first.
+
+Example: If Team A scores a 4 and 5, their Vegas score is 45 (not 9). If Team B scores 5 and 6, their score is 56.
+
+The difference between the two scores is the number of points awarded for that hole.
+
+Using the example above: 56 – 45 = 11 points awarded to Team A.
+
+💥 The Twist
+Since scores are joined, not added, a single bad hole can swing the match:
+
+Example: Team A scores 3 & 7 = 37
+
+Team B scores 4 & 8 = 48
+
+Difference = 11 points
+
+But if one player scores 10, and the teammate 4, it becomes 410 — a massive number.
+
+🧮 Score Calculation Notes
+Always put the lower number first when combining a team’s scores (e.g., 4 & 6 = 46, not 64)
+
+Some versions allow the higher number first to penalize poor play more — this should be agreed upon in advance
+
+💰 Betting
+Points per hole can be worth a dollar, a quarter, or any agreed unit
+
+The swing in points makes this a high-stakes game over 18 holes
+
+Some groups cap the max points per hole (e.g., 10 or 20) to prevent blowouts
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  Team Play 
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Alternate Shot
+  Modified/Hybrid Gameplay
+
+
+### SCORING FORMAT(S)
+  Match Play
+
+
+
+________________________________________
+
+
+
+
+
+
+
+
+10. Vegas
+Description: Team-based game using combined scores in a creative way.
+
+How It’s Played: In 2-person teams, players' hole scores are combined into a two-digit number (e.g., a 4 and 5 = 45). Lower total wins.
+
+Players: 4 (2-person teams).
+
+11. Snake
+Description: Focuses on putting—penalties are given for 3-putts.
+
+How It’s Played: First player to 3-putt gets the "snake." Each subsequent 3-putt adds value to the snake. Last to 3-putt owes the pot.
+
+Players: 2–4.
+
+12. Alternate Shot (Foursomes)
+Description: Teammates alternate shots using one ball per team.
+
+How It’s Played: One player tees off, the partner hits the second shot, and so on until holed. Teammates alternate tee shots.
+
+Players: 2-person teams (4 total players).
+
+13. Shamble
+Description: A hybrid of scramble and best ball.
+
+How It’s Played: All tee off, pick the best drive, then play individual balls from there. Best score counts (or total scores).
+
+Players: 2–4 per team.
+
+14. Quota
+Description: A Stableford-style game where players try to beat a personal point quota.
+
+How It’s Played: Each player is assigned a quota (usually 36 minus their handicap). Points earned as in Stableford. Beat your quota to win.
+
+Players: Any number.
+
+15. Cha-Cha-Cha (1-2-3 Best Ball)
+Description: Team game with variable best-ball scores per hole.
+
+How It’s Played: Use the 1 best score on Hole 1, 2 best scores on Hole 2, 3 best on Hole 3, and repeat in cycles.
+
+Players: 3–4 per team.
+
+
+ 
+ ### 2. Best Ball/Fourball
+ 
+ ### 3. Scramble
+
+ ### 4. Alt Shot
+
+ ### 5. Nasssau
+
+ ### 6. Skins Match
+
+ ### 7. Stableford 
+
+ ### 8. Rabbit 
+
+ ### 9. Wolf
+
+ ### 10. Hollywood
+
+ ### 11. Bingo,Bango,Bongo
+
+ ### 12. Vegas
+
+ ### 13. 9 Point Game (Threesomes Only)
+ 
+ ### 14. Banker
+
+ ### 15. Four Horseman
+
+ ### 16. High Ball/Low Ball
+
+ ### 17. Two Ball Low Net
+
+ ### 18. Trouble
+
+ ### 19. Custom Game
+
+min player
+max player
