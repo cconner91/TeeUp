@@ -10,7 +10,7 @@
 
 
 ## Scoring Formats
-These define how players or teams are scored:
+These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
 
 Stroke Play: Total number of strokes over 18 holes.
 Match Play:	Holes are won/lost/tied based on individual hole performance.	
@@ -19,7 +19,7 @@ Points-Based: Players earn points based on hole performance.
 
 
 ## GamePlay Formats
-These define how players or teams are scored:
+These define how players or teams play their ball:
 
 Individual Play: 	Each player plays their own ball throughout.
 Best Ball (Four Ball): 	Each player plays their own ball, best score counts
@@ -28,8 +28,8 @@ Alternate Shot (Foursomes):	Teammates alternate shots with a single ball.	Altern
 Modified/Hybrid Formats:	Combination of multiple play styles.
 
 
-
 ## Player Matchup Formats
+These define the format in which the players or teams are matched up. 
 
 Solo
 H2H: Head to Head - 1v1, 1v1v1, 1v1v1v1
@@ -396,8 +396,6 @@ Points:
 
 
 
-
-
 ________________________________________
 
 ## 11. Vegas
@@ -464,6 +462,159 @@ Some groups cap the max points per hole (e.g., 10 or 20) to prevent blowouts
 
 ________________________________________
 
+## 12. 9 Ball
+
+### NUMBER OF PLAYERS
+3
+
+### DESCRIPTION & SCORING RULES
+9 Ball is a 3 person stroke-play game in which there are a total of 9 points avaialble for each hole.
+
+A total of 5 points is awarded to the outright winner, 3 points is awarded to 2nd place and 1 point is awarded to 3rd.
+
+If there is a tie, then the points will be split.
+
+3-way tie = Each player receives 3 points
+2 way tie for 1st = 1st & 2nd receive 4 points each and 3rd place receives 1 point.
+2 way tie for 2nd = 1st place receives 5 points and the 2nd and 3rd place players receive 2 points each.
+
+
+### PLAYER MATCHUP FORMAT(S) 
+  H2H 
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+
+### SCORING FORMAT(S)
+  Stroke Play
+
+
+
+________________________________________
+
+## 13. Snake
+
+### NUMBER OF PLAYERS
+3
+
+### DESCRIPTION & SCORING RULES
+Snake is a putting pressure game focused entirely on 3-putts. The goal is to avoid being the last person to 3-putt, because the “Snake” pot grows with every 3-putt — and whoever has the Snake last at the end of the round pays the pot.
+
+Everyone plays their own ball
+
+The game starts with no one holding the Snake.
+
+If a player 3-putts, they get tagged with the Snake.
+
+If another player 3-putts later, they take over the Snake.
+
+The Snake continues to pass from player to player with each new 3-putt.
+
+Whoever is holding the Snake at the end of the round pays the agreed-upon pot.
+
+💰 Betting Options
+
+💵 Running Pot (Most Common)
+Each time someone 3-putts, $1 (or more) is added to the pot.
+
+The person holding the Snake at the end pays the entire pot.
+  
+### PLAYER MATCHUP FORMAT(S) 
+  H2H 
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+
+### SCORING FORMAT(S)
+  Stroke Play
+
+________________________________________
+
+
+## 14. Hollywood
+
+### NUMBER OF PLAYERS
+2 or 4
+
+### DESCRIPTION & SCORING RULES
+
+Hollywood is a team match play format with a unique twist: each match starts as three separate bets (front 9, back 9, and total 18), and players can choose to press (start a new bet) if they’re behind. Presses are the heart of the drama — they allow teams to claw back into a match or escalate the stakes.
+
+Three matches run simultaneously:
+
+Front 9 (holes 1–9)
+Back 9 (holes 10–18)
+Overall 18
+
+Each match is worth a set amount (e.g., $5, $10, or points).
+
+🏌️ Match Play Format
+Each hole is scored match play-style: win, lose, or halve
+
+The team that wins more holes wins the match (e.g., win 5 of 9 holes to take the front 9)
+
+🔁 The Press (Key Rule)
+A press is a new side bet that starts when a team is behind. It lets them “double down” and try to recover losses.
+
+🔹 When Can You Press?
+A team is 2 or more holes down in a given match (front 9, back 9, or overall)
+
+They can call a press, starting a new bet for the remaining holes in that match
+
+🔹 Example:
+On hole 6, Team A is 3 down on the front 9
+
+They press → a new match starts from hole 6 through 9
+
+That side bet is scored separately from the original front 9 bet
+
+Multiple presses can happen, and they stack up — creating many small side matches across the round.
+
+💰 Betting Example
+Let’s say each bet is worth $10:
+
+Team A wins front 9: +$10
+
+Team B wins back 9: +$10
+
+Team A wins overall 18: +$10
+
+But if three presses were made during the round (and Team B won two of them), the final payout might be:
+
+Team A: +$20
+
+Team B: +$20
+→ Essentially, you tally each bet separately and settle up at the end.
+
+### PLAYER MATCHUP FORMAT(S) 
+  H2H
+  Team Play
+
+
+### GAMEPLAY FORMAT(S)
+  Individual Play
+  Best Ball (Four Ball)
+  Scramble
+  Alternate Shot 
+  Modified/Hybrid Gameplay
+
+
+### SCORING FORMAT(S)
+  Stroke Play
+
+
+________________________________________
+
+## 15. CUSTOM GAME BUILD
+
+### DESCRIPTION & SCORING RULES
+Customize your own game taking bits and pieces from other games, or an entirely new game all together. 
+
+Determine the rules by selecting the Number of Players in your Match, Player Matchup Format, Gameplay Format, and Scoring Format. 
+
+Give your game a name and save it into your favorites to be played later.
 
 
 
@@ -471,85 +622,8 @@ ________________________________________
 
 
 
-10. Vegas
-Description: Team-based game using combined scores in a creative way.
-
-How It’s Played: In 2-person teams, players' hole scores are combined into a two-digit number (e.g., a 4 and 5 = 45). Lower total wins.
-
-Players: 4 (2-person teams).
-
-11. Snake
-Description: Focuses on putting—penalties are given for 3-putts.
-
-How It’s Played: First player to 3-putt gets the "snake." Each subsequent 3-putt adds value to the snake. Last to 3-putt owes the pot.
-
-Players: 2–4.
-
-12. Alternate Shot (Foursomes)
-Description: Teammates alternate shots using one ball per team.
-
-How It’s Played: One player tees off, the partner hits the second shot, and so on until holed. Teammates alternate tee shots.
-
-Players: 2-person teams (4 total players).
-
-13. Shamble
-Description: A hybrid of scramble and best ball.
-
-How It’s Played: All tee off, pick the best drive, then play individual balls from there. Best score counts (or total scores).
-
-Players: 2–4 per team.
-
-14. Quota
-Description: A Stableford-style game where players try to beat a personal point quota.
-
-How It’s Played: Each player is assigned a quota (usually 36 minus their handicap). Points earned as in Stableford. Beat your quota to win.
-
-Players: Any number.
-
-15. Cha-Cha-Cha (1-2-3 Best Ball)
-Description: Team game with variable best-ball scores per hole.
-
-How It’s Played: Use the 1 best score on Hole 1, 2 best scores on Hole 2, 3 best on Hole 3, and repeat in cycles.
-
-Players: 3–4 per team.
 
 
- 
- ### 2. Best Ball/Fourball
- 
- ### 3. Scramble
 
- ### 4. Alt Shot
 
- ### 5. Nasssau
 
- ### 6. Skins Match
-
- ### 7. Stableford 
-
- ### 8. Rabbit 
-
- ### 9. Wolf
-
- ### 10. Hollywood
-
- ### 11. Bingo,Bango,Bongo
-
- ### 12. Vegas
-
- ### 13. 9 Point Game (Threesomes Only)
- 
- ### 14. Banker
-
- ### 15. Four Horseman
-
- ### 16. High Ball/Low Ball
-
- ### 17. Two Ball Low Net
-
- ### 18. Trouble
-
- ### 19. Custom Game
-
-min player
-max player
