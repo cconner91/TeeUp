@@ -32,67 +32,70 @@ Players can first select the total number of players that are in their group. Te
 Players may also choose a custom game or customize the pre-set game chosen. 
 
 
-## Scoring Styles
+## Scoring Formats
+These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
 
-### 1. Stroke Play
-    a. 2-Man
-    b. 3-Man
-    c. 4-Man
-    d. Custom Group
+### Stroke Play: Counta the total number of strokes over 18 holes.
+### Match Play:	Holes are won/lost/tied based on individual hole performance.	
+### Points-Based: Players earn points based on hole performance.	
 
-### 2. Match Play 
-    a. 2-Man
-    b. 3-Man
-    c. 4-Man
-    d. Custom Group
 
-### 3. Points 
-    a. 2-Man
-    b. 3-Man
-    c. 4-Man
-    d. Custom Group
+
+## GamePlay Formats
+These define how players or teams play their ball:
+
+### Individual Play: Each player plays their own ball throughout.
+### Best Ball (Four Ball): Each player plays their own ball, best score counts
+### Scramble: All players hit, best shot is selected, all play from there.	Scramble, Shamble (partial)
+### Alternate Shot (Foursomes): Teammates alternate shots with a single ball.
+### Modified/Hybrid Formats: Combination of multiple play styles.
+
+
+## Player Matchup Formats
+These define the format in which the players or teams are matched up. 
+
+### Solo
+### H2H: Head to Head - 1v1, 1v1v1, 1v1v1v1
+### H2H Hybrid: Head to Head in which 1 player is competing against a team (1v2)
+### Team Play: Any team against another team where the first number indicates the amount of players on your team and the second number represents the number of players on the opposing team - 2v2, 4v4, 4(solo)
+### Modified/Hybrid Formats: Combination of multiple match setup formats.
+
+
 
  ________________________
 
 ## Games
 
- ### 1. Straight Up
+ ### 1. Basic Stroke Play (Medal Play)
  
- ### 2. Best Ball/Fourball
+ ### 2. Match Play (Singles)
  
- ### 3. Scramble
+ ### 3. Match Play (Team)
 
- ### 4. Alt Shot
+ ### 4. Basic Scramble
 
- ### 5. Nasssau
+ ### 5. Basic Shamble
 
- ### 6. Skins Match
+ ### 6. Stableford
 
- ### 7. Stableford 
+ ### 7. Nassau 
 
- ### 8. Rabbit 
+ ### 8. Skins 
 
  ### 9. Wolf
 
- ### 10. Hollywood
+ ### 10. Bingo, Bango, Bongo
 
- ### 11. Bingo,Bango,Bongo
+ ### 11. Vegas
 
- ### 12. Vegas
+ ### 12. 9-Ball (Threesomes Only)
 
- ### 13. 9 Point Game (Threesomes Only)
+ ### 13. Snake
  
- ### 14. Banker
+ ### 14. Hollywood
 
- ### 15. Four Horseman
+ ### 15. Custom Game
 
- ### 16. High Ball/Low Ball
-
- ### 17. Two Ball Low Net
-
- ### 18. Trouble
-
- ### 19. Custom Game
 
 min player
 max player
