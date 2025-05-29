@@ -237,4 +237,8 @@ _______________________________________________________________
 2. Find a golf course database where we will pull the course information - This will need to contain the following:
        a. Score Card for course
        b. Slope rating and Course rating for each tee as well as course length from each tee
-3. Write the logic for scoring
+
+https://rapidapi.com/slashgolf/api/live-golf-data
+https://documenter.getpostman.com/view/1756312/UVeDsT2b
+
+4. Write the logic for scoring
