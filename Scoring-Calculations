@@ -1,0 +1,109 @@
+# Core Data Model
+
+## ✅ Entities to Define
+
+### Players: name, handicap index, course handicap (per tee box)
+
+### Courses: hole data (par, yardage, stroke index/handicap rating)
+
+### Rounds: date, course, players, tees
+
+### Scores: player-hole scores, gross & net
+
+### Games: format, rules, scoring logic
+
+
+
+## Key Calculations to Support
+
+### 🧮 Handicap Adjustments
+Course Handicap = Handicap Index × (Slope Rating / 113)
+
+Adjusted per tee box
+
+For net scoring, calculate Net Score = Gross Score – Handicap Strokes
+
+🎯 Stroke Allocation Per Hole
+Use the hole’s stroke index (1–18):
+
+For an 18 handicap → 1 stroke on every hole
+
+For a 24 handicap → 1 stroke on every hole + 2 strokes on stroke index 1–6
+
+For a 9 handicap → 1 stroke on stroke index 1–9 only
+
+Use this to create a hole_stroke_allowance map for each player.
+
+____________________________________
+
+
+### Design your scoring logic to be modular:
+
+class ScoringEngine {
+  calculateGrossScores(scores: ScorecardData): GrossScoreResult;
+  calculateNetScores(scores: ScorecardData, handicaps: HandicapMap): NetScoreResult;
+  calculateMatchPlayResults(grossOrNetScores, format): MatchPlayResult;
+  calculateBestBallResults(teams, holeScores): BestBallResult;
+  calculateSkins(holeScores): SkinsResult;
+  // Add more formats as needed
+}
+
+Each game type should call into the core engine with a specific scoring strategy
+
+This enables plugging in new formats easily
+
+
+### Example: Stroke Play Scoring (Net):
+
+for each player:
+  net_score = 0
+  for each hole:
+    gross = player_scores[hole]
+    strokes = getStrokesForHole(player.handicap, hole.strokeIndex)
+    net = gross - strokes
+    net_score += net
+
+
+
+### Example: Match Play Scoring:
+
+for each hole:
+  player1_net = player1_score[hole] - getStrokesForHole(player1_handicap, hole.strokeIndex)
+  player2_net = player2_score[hole] - getStrokesForHole(player2_handicap, hole.strokeIndex)
+
+  if player1_net < player2_net:
+    player1_holes_won += 1
+  else if player2_net < player1_net:
+    player2_holes_won += 1
+
+
+### Example: Best Ball (Net or Gross):
+
+for each team:
+  for each hole:
+    best_net_score = min(
+      team_player_scores.map(p => p.gross - getStrokesForHole(p.handicap, hole.strokeIndex))
+    )
+    team_scorecard[hole] = best_net_score
+
+________________________________
+
+## Enhancements
+
+Support team handicap adjustments (e.g., 90% of handicap for best ball)
+
+Add dot game logic (birdies, pars, greenies, sandies, etc.)
+
+Real-time leaderboards: aggregate score states as each hole is played
+
+
+_________________________________
+
+
+## Data Storage & API Suggestions
+
+Store all raw scores per player per hole
+
+Store computed values like net scores, skins, matches in derived tables or cache
+
+Use a rules engine or service layer (e.g., ScoreService.calculateNetMatchResult())
