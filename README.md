@@ -134,7 +134,7 @@ _______________________________________________________________
 A USGA Handicap Index is a numerical value that represents a golfer's demonstrated playing ability, calculated based on their past scores relative to the difficulty of the courses 
 and tees played, essentially providing a portable measure of how well a golfer plays across different courses; it is the official term used by the United States Golf Association to describe a golfer's handicap. 
 
-### Calculation:
+### Player's Handicap Calculation:
 It is calculated by averaging the best 8 "Score Differentials" from a golfer's most recent 20 rounds, taking into account the course difficulty and playing conditions. 
 
 ### Purpose:
@@ -144,9 +144,122 @@ Through the USGA handicap system, players can enter their USGA handicap (A furth
 
 The handicap scoring algorithm will then be applied to different games to ensure the proper number of strokes, points and other scoring is fairly integrated. 
 
+The handicap for a player for a given match is not only based on their actual handicap value, but also with the course rating. If a player is a 10 handicap, and they are playing a tougher golf course, their course handicap may actually be 13.
+
 This will be an optional tool for players to apply when they play a game.
 
+### Course Handicap Calculation:
+To convert a player's Handicap Index into a Course Handicap for a specific course and set of tees, use this formula:
+
+Course Handicap = (Handicap Index) × (Slope Rating ÷ 113) + (Course Rating - Par)
+
+Explanation of Terms
+
+Handicap Index: A portable number representing your potential scoring ability (e.g., 10.4)
+
+Slope Rating: How difficult the course is for a bogey golfer compared to a scratch golfer (range: 55–155; 113 is average)
+
+Course Rating: What a scratch golfer is expected to shoot (e.g., 71.2)
+
+Par: The expected score for the course (e.g., 72)
+
+Say a golfer has a Handicap Index of 12.3, and they're playing from a tee with:
+
+Slope Rating: 130
+Course Rating: 70.5
+Par: 72
+
+Course Handicap = 12.3 × (130 / 113) + (70.5 - 72)
+                = 12.3 × 1.1504 + (-1.5)
+                = 14.15 - 1.5
+                = 12.65 → Rounded = 13
+
+So this player’s Course Handicap = 13.
+
+
+
+### How Handicaps are Calulated in Scoring Matches:
+
+Once a player(s) handicap for a match is calculated, in stroke play, it is fairly simple to determine the handicap for scoring the match.
+
+Each hole on every golf course is assigned a difficulty value ranging from 1-18, 1 being the "hardest" and 18 being the "easiest" (assuming it's a standard 18 hole course).
+
+If a player has a handicap of 7 for a given match, they will, as a result, receive an additional stroke on the 7 most difficult holes.
+
+There will be 2 scores for any player using a handicap in their match
+
+### GROSS SCORE: This is the score (in stroke play) the player receives without factoring in the handicap.
+### NET SCORE: This is the score (in stroke play) the player receives once the handicap is factored into the score.
+
+E.g. Assume a player has a handicap of 7 for a given match. They are playing the 2nd hole which happens to be the #1 handicap hole on the course (meaning it's considered the most difficult hole on the course). This 2nd hole that this player is playing is a Par 5. Now assume this player 
+scores a 6 on this hole meaning it took them 6 strokes to get the ball in the hole. Because this is the #1 most difficult hole on the course AND the player has a handicap of 7, then they will receive a Net Par of 5 when the hole is scored.
+
+
+### Additional Handicap Calculations
+
+In some formats (e.g., Best Ball, Scramble, Match Play), you apply allowances to the Course Handicap to get the Playing Handicap:
+
+### Stroke Play: 100% of the Handicap
+
+### Best-Ball: 85% (for men), 90% (for women)
+
+### Scramble: Team-based formulas (e.g., 35% of A + 15% of B)
+
+### Custom: Users will be able to enter a custom handicap allowance based on a percentage
+
+So: 
+
+Playing Handicap = Course Handicap × Format Allowance %
+
+
+
+## Example Formulas
+
+📄 Setup
+
+Assume:
+
+A2: Handicap Index (e.g., 12.3)
+B2: Slope Rating (e.g., 130)
+C2: Course Rating (e.g., 70.5)
+D2: Course Par (e.g., 72)
+E2: Allowance % (e.g., 0.85 for 85%)
+
+### JS Code
+
+function calculateCourseHandicap(handicapIndex: number, slope: number, courseRating: number, par: number): number {
+  const rawHandicap = handicapIndex * (slope / 113) + (courseRating - par);
+  return Math.round(rawHandicap);
+}
+
+function calculatePlayingHandicap(handicapIndex: number, slope: number, courseRating: number, par: number, allowancePercent: number): number {
+  const courseHandicap = calculateCourseHandicap(handicapIndex, slope, courseRating, par);
+  return Math.round(courseHandicap * allowancePercent);
+}
+
+// Example
+const courseHcp = calculateCourseHandicap(12.3, 130, 70.5, 72); // => 13
+const playingHcp = calculatePlayingHandicap(12.3, 130, 70.5, 72, 0.85); // => 11
+
+
+### Python Code
+
+def calculate_course_handicap(handicap_index, slope_rating, course_rating, par):
+    raw_handicap = handicap_index * (slope_rating / 113) + (course_rating - par)
+    return round(raw_handicap)
+
+def calculate_playing_handicap(handicap_index, slope_rating, course_rating, par, allowance_percent):
+    course_handicap = calculate_course_handicap(handicap_index, slope_rating, course_rating, par)
+    return round(course_handicap * allowance_percent)
+
+
+Example:
+course_hcp = calculate_course_handicap(12.3, 130, 70.5, 72)  # => 13
+playing_hcp = calculate_playing_handicap(12.3, 130, 70.5, 72, 0.85)  # => 11
+
+
 ______________________________________________________________
+
 # Application Sections
 
 ## Sign Up Page
