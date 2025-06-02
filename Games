@@ -8,6 +8,29 @@
 ## Scoring Format(s)
 ## Money Game
 
+export const scoringFormatDescriptions: Record<scoringFormat, string> = {
+  [scoringFormat.StrokePlay]: "Counts the total number of strokes over 18 holes.",
+  [scoringFormat.MatchPlay]: "Holes are won/lost/tied based on individual hole performance.",
+  [scoringFormat.PointsBased]: "Players earn points based on hole performance."
+};
+
+export const gamePlayFormatDescriptions: Record<gameplayFormat, string> = {
+  [gameplayFormat.Individual]: "Each player plays their own ball throughout the round.",
+  [gameplayFormat.BestBall]: "Each player plays their own ball, but only the best score on each hole counts for the team.",
+  [gameplayFormat.Scramble]: "All players hit, best shot is selected, all play from there - continues until the ball is in the hole",
+  [gameplayFormat.Shamble]: "All tee off, best drive is chosen, then all players play their own ball to the hole.",
+  [gameplayFormat.Modified]: "A custom mix of other gameplay formats (e.g., scramble front 9, best ball back 9)."
+};
+
+export const matchupFormatDescriptions: Record<matchupFormat, string> = {
+  [matchupFormat.Solo]: "Solo Play",
+  [matchupFormat.H2H]: "H2H matchup - 1v1, 1v1v1, 1v1v1v1",
+  [matchupFormat.H2HModified]: "H2H matchup hybrid - 2v1, 1v3, 4v1 etc....",
+  [matchupFormat.TeamPlay]: "Any team against another team where the first number indicates the amount of players on your team and the second number represents the number of players on the opposing team - 2v2, 4v4, 4(solo)",
+  [matchupFormat.ModifiedMatchup]: "Combination of multiple match setup formats."
+};
+
+
 
 ## Scoring Formats
 These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
