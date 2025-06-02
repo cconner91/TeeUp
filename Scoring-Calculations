@@ -36,6 +36,51 @@ Use this to create a hole_stroke_allowance map for each player.
 
 ____________________________________
 
+interface ScoringCalculator {
+  calculateScore(gameData: GameData, players: Player[]): ScoreResult;
+}
+
+Where:
+
+GameData contains hole scores, handicaps, etc.
+Player represents player or team info.
+ScoreResult contains the computed total scores or per-hole results.
+
+______________________________
+
+Scoring Type Calculator Function:
+
+
+
+
+class StrokePlayCalculator implements ScoringCalculator {
+  calculateScore(gameData: GameData, players: Player[]): ScoreResult {
+    // Sum strokes over all holes for each player/team
+    const results = players.map(player => {
+      const totalStrokes = gameData.holes.reduce((sum, hole) => sum + (hole.scores[player.id] || 0), 0);
+      return { playerId: player.id, score: totalStrokes };
+    });
+    return { results };
+  }
+}
+class MatchPlayCalculator implements ScoringCalculator {
+  calculateScore(gameData: GameData, players: Player[]): ScoreResult {
+    // Count holes won/lost/tied based on head-to-head hole performance
+    // This is simplified; depends on matchup format etc.
+    // ... logic here ...
+  }
+
+}
+class PointsBasedCalculator implements ScoringCalculator {
+  calculateScore(gameData: GameData, players: Player[]): ScoreResult {
+    // Sum points over all holes for each player/team
+    const results = players.map(player => {
+      const totalPoints = gameData.holes.reduce((sum, hole) => sum + (hole.scores[player.id] || 0), 0);
+      return { playerId: player.id, score: totalStrokes };
+    });
+    return { results };
+  }
+
 
 ### Design your scoring logic to be modular:
 
