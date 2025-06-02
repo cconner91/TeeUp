@@ -1,12 +1,12 @@
 #Golf Game Database
 
-## Golf Game 
-## Number of Players Allowed
-## Game Description & Scoring Rules
-## GamePlay Format(s)
-## Player Matchup Format(s)
-## Scoring Format(s)
-## Money Game
+This section defines 
+
+1. The different games available for users to choose in the application
+2. The different formatting attributes that can be asscociated with a game
+3. The different attributes of each game
+
+
 
 export const scoringFormatDescriptions: Record<scoringFormat, string> = {
   [scoringFormat.StrokePlay]: "Counts the total number of strokes over 18 holes.",
@@ -30,9 +30,9 @@ export const matchupFormatDescriptions: Record<matchupFormat, string> = {
   [matchupFormat.ModifiedMatchup]: "Combination of multiple match setup formats."
 };
 
+##Attributes
 
-
-## Scoring Formats
+### Scoring Formats
 These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
 
 Stroke Play: Count the total number of strokes over 18 holes.
@@ -72,6 +72,98 @@ Users will be able to input their wagers into their match and the app will then 
 
 __________________________________________________
 
+## InAPP Game Definition
+
+Example
+
+    ### id: "wolf", (API Name)
+    ### name: "Wolf", (Friendly name)
+    ### popularity: 5 (The number rank on the games list)
+    ### description: (Game Description)
+
+    "Wolf is a rotating-player format where each player gets a turn as the “Wolf” and has the power to choose partners — or go it alone — on each hole. The game blends match play, strategy, and alliances, and is great for 4 players.
+    Players rotate as the “Wolf” each hole. After drives, the Wolf chooses whether to play solo or pick a partner for that hole."
+
+    ### rules: (Game Rules)
+
+    Before teeing off, establish a playing order: Player A, B, C, D
+
+    This order rotates each hole, so everyone gets a turn as the Wolf
+
+    Example Rotation:
+
+      Hole 1: A is Wolf
+      Hole 2: B is Wolf
+      Hole 3: C is Wolf
+      Hole 4: D is Wolf
+      Hole 5: back to A, and so on
+
+    All 4 players tee off in order, while The Wolf watches the other players’ tee shots.
+
+    After each drive (in traditional rules), the Wolf must immediately decide whether to pick that player as a partner for the hole.
+
+    If the Wolf skips a player, they cannot go back and choose them later.
+
+    After the final tee shot, if the Wolf hasn’t chosen a partner, they can:
+
+    Choose the final player, or
+
+    Go Lone Wolf and play 1 vs 3
+
+  💰 Scoring
+  Scoring can be done in points or for money. A common version is Nassau-style or per-hole betting.
+
+  Teams & Points
+
+  Wolf + Chosen Partner vs Other 2:
+    If the Wolf's team wins the hole: each wins 1 point
+    If they lose: the opposing team each gets 1 point
+    Tie: No points or everyone gets 0.5
+
+  Lone Wolf (1 vs 3):
+    If the Wolf wins: gets 3 points
+    If the Wolf loses: each of the 3 opponents gets 1 point
+
+
+    Example: 
+
+      Team A scores 3 & 7 = 37
+      Team B scores 4 & 8 = 48
+      Difference = 11 points
+      But if one player scores 10, and the teammate 4, it becomes 410 — a massive number.
+
+    🧮 Score Calculation Notes
+    Always put the lower number first when combining a team’s scores (e.g., 4 & 6 = 46, not 64)
+    Some versions allow the higher number first to penalize poor play more — this should be agreed upon in advance
+
+    💰 Betting
+    Points per hole can be worth a dollar, a quarter, or any agreed unit
+    The swing in points makes this a high-stakes game over 18 holes
+    Some groups cap the max points per hole (e.g., 10 or 20) to prevent blowouts"
+
+
+    ### minPlayers: 4
+    ### maxPlayers: 4
+
+    ### scoringFormat:(Format in which the game is scored)
+    scoringFormat.PointsBased
+
+    ### gameplayFormat: (Format(s) in which players can play their ball in the game)
+    gameplayFormat.Individual
+
+    ### matchupFormat: (Format(s) in which players can be matched up throughout the game)
+    matchupFormat.ModifiedMatchup
+
+    ### bettingEnabled: true,
+    ### handicapEnabled: false,
+
+    
+    
+    tags: ['Popular', 'Betting', 'Points-Based]
+ 
+},
+
+____________________________________________________
 
 The games below will serve as the "database" of different pre-set games available to users. It will contain the name, how many players it can be played with, the description of the game, the rules of the game and the formats in which the game can be played. Each of the games (unless otherwise indicated) can have players' handicaps
 factored into the scoring.
