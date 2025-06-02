@@ -12,7 +12,7 @@
 ## Scoring Formats
 These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
 
-Stroke Play: Counta the total number of strokes over 18 holes.
+Stroke Play: Count the total number of strokes over 18 holes.
 Match Play:	Holes are won/lost/tied based on individual hole performance.	
 Points-Based: Players earn points based on hole performance.	
 
@@ -23,7 +23,8 @@ These define how players or teams play their ball:
 
 Individual Play: Each player plays their own ball throughout.
 Best Ball (Four Ball): Each player plays their own ball, best score counts
-Scramble: All players hit, best shot is selected, all play from there.	Scramble, Shamble (partial)
+Scramble: All players hit, best shot is selected, all play from there - continues until the ball is in the hole.
+Shamble: All players hit tee shot, best shot is selected, all play from there. Players play their own subsequent shots and best overall score is taken. 
 Alternate Shot (Foursomes): Teammates alternate shots with a single ball.
 Modified/Hybrid Formats: Combination of multiple play styles.
 
@@ -31,7 +32,7 @@ Modified/Hybrid Formats: Combination of multiple play styles.
 ## Player Matchup Formats
 These define the format in which the players or teams are matched up. 
 
-Solo
+Solo: Solo Play
 H2H: Head to Head - 1v1, 1v1v1, 1v1v1v1
 H2H Hybrid: Head to Head in which 1 player is competing against a team (1v2)
 Team Play: Any team against another team where the first number indicates the amount of players on your team and the second number represents the number of players on the opposing team - 2v2, 4v4, 4(solo)
@@ -366,7 +367,7 @@ Lone Wolf (1 vs 3):
 
 ________________________________________
 
-## 10. Bingo Bango Bongo
+## 10. Bingo, Bango, Bongo
 
 ### NUMBER OF PLAYERS
 3-4
