@@ -3,13 +3,9 @@
 ## ✅ Entities to Define
 
 ### Players: name, handicap index, course handicap (per tee box)
-
 ### Courses: hole data (par, yardage, stroke index/handicap rating)
-
 ### Rounds: date, course, players, tees
-
 ### Scores: player-hole scores, gross & net
-
 ### Games: format, rules, scoring logic
 
 
@@ -35,6 +31,22 @@ For a 9 handicap → 1 stroke on stroke index 1–9 only
 Use this to create a hole_stroke_allowance map for each player.
 
 ____________________________________
+
+Score calculations are based off of 4 primary factors.
+
+1. "scoringFormat" - This is largely the most important value in score calculation. It not only determines the unit of scoring value (stroke, point or boolean)
+        StrokePlay= Incrementing values on each hole with simple sum function
+        MatchPlay= A terminary value {Win=1, Draw=0.5, Lose=0}
+        PointsBased= An integer value which is determined by the game rules.
+
+
+2. "gameplayFormat" - While not directly impacting overall scoring, the gameplayFormat.[TYPE] impacts the method in which scores are generated on a hole-by-hole basis because
+                      each type of gameplayFormat offers different values which are ultimately accepted as the final score being used per hole. 
+
+3. "matchupFormat" - Again, while this doesn't impact the direct scoring, it impacts how the app stores the scores.
+
+4. Handicap - The optional handicap will influence the scoring when enabled.
+
 
 interface ScoringCalculator {
   calculateScore(gameData: GameData, players: Player[]): ScoreResult;
