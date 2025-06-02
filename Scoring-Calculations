@@ -121,6 +121,61 @@ for each player:
     net_score += net
 
 
+### Waterfall Scoring:
+
+[Number of Players]
+        |
+        v
+[Select Game Format]
+        |
+        v
+[Determine Matchup Format]
+        |
+        v
+[Apply Handicap Calculation Logic]
+        |
+        v
+[Select Scoring Format]
+        |
+        v
+[Determine Gameplay Format]
+        |
+        v
+[Calculate Final Scores Considering Handicaps]
+
+
+
+
+function adjustScoresForHandicap(rawScores, playerHandicaps, matchupFormat, scoringFormat) {
+  if (matchupFormat === 'Solo' && scoringFormat === 'StrokePlay') {
+    // Apply stroke reduction per player straightforwardly
+  } else if (matchupFormat === 'TeamPlay' && scoringFormat === 'MatchPlay') {
+    // Apply team handicap rules, e.g., assigning handicap strokes to holes
+  } else {
+    // Other custom logic based on formats
+  }
+  return adjustedScores;
+}
+// Usage in scoring flow
+const adjustedScores = adjustScoresForHandicap(rawScores, playerHandicaps, gameConfig.matchupFormat, gameConfig.scoringFormat);
+finalScores = calculateScoresFromAdjusted(adjustedScores, gameConfig);
+
+
+Hole-by-Hole Scoring Layer
+
+Record and calculate scores for each hole individually.
+Apply scoring rules (including handicaps, gameplay format considerations) per hole.
+Store intermediate results per hole for UI and further processing.
+Total Scoring Layer
+
+Aggregate hole scores to get total or cumulative scores for players or teams.
+Use these totals for final rankings, match results, or betting outcomes.
+Ensure aggregation respects scoring format (e.g., Match Play might aggregate wins/losses rather than stroke counts).
+Random/Conditional Scoring Handling
+
+Implement hooks or conditional logic to apply random or special scoring rules on specified holes or scenarios (e.g., a random “power hole” where scoring differs).
+These conditions can be defined per game or via configuration/options at game setup.
+
 
 ### Example: Match Play Scoring:
 
