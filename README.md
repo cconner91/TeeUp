@@ -33,32 +33,34 @@ Players may also choose a custom game or customize the pre-set game chosen.
 
 
 ## Scoring Formats
+
 These define how players or teams are scored. There are 3 primary scoring formats however some games can have a combination of these styles within a match:
 
-### Stroke Play: Counta the total number of strokes over 18 holes.
-### Match Play:	Holes are won/lost/tied based on individual hole performance.	
-### Points-Based: Players earn points based on hole performance.	
 
-
+  ### StrokePlay = "Stroke Play",         // Total number of strokes over 18 holes
+  ### MatchPlay = "Match Play",           // Holes are won/lost/tied based on individual hole performance.
+  ### PointsBased = "Points-Based"        // Players earn points based on hole performance.	
+  
 
 ## GamePlay Formats
 These define how players or teams play their ball:
 
-### Individual Play: Each player plays their own ball throughout.
-### Best Ball (Four Ball): Each player plays their own ball, best score counts
-### Scramble: All players hit, best shot is selected, all play from there.	Scramble, Shamble (partial)
-### Alternate Shot (Foursomes): Teammates alternate shots with a single ball.
-### Modified/Hybrid Formats: Combination of multiple play styles.
+  ### Individual = "Individual Play",                     // Each player plays their own ball
+  ### BestBall = "Best Ball",                             // Each player plays their ball and best score counts
+  ### Scramble = "Scramble",                              // All play, best shot is selected each time
+  ### Shamble = "Shamble",                                // Drive selected, then all play own ball
+  ### AlternateShot = "Alternate Shot",                   // Teammates alternate shots
+  ### Modified = "Modified/Hybrid Format"                 // Combination of styles
 
 
 ## Player Matchup Formats
 These define the format in which the players or teams are matched up. 
 
-### Solo
-### H2H: Head to Head - 1v1, 1v1v1, 1v1v1v1
-### H2H Hybrid: Head to Head in which 1 player is competing against a team (1v2)
-### Team Play: Any team against another team where the first number indicates the amount of players on your team and the second number represents the number of players on the opposing team - 2v2, 4v4, 4(solo)
-### Modified/Hybrid Formats: Combination of multiple match setup formats.
+  ### Solo = "Solo",                                    // Solo Play
+  ### H2H = "Head to Head",                             // H2H matchup - 1v1, 1v1v1, 1v1v1v1
+  ### H2HHybrid = "Head to Head Hybrid",                // H2H matchup hyrbid - 2v1, 1v3, 4v1 etc...
+  ### TeamPlay = "Team Play",                           // Team of 2 or more vs another team or 
+  ### ModifiedMatchup= "Modified Match Up"              // Combination of matchup styles
 
 
 
