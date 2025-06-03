@@ -1,0 +1,97 @@
+# Handicap Calculations
+
+Users will manually input the handicaps for themselves and playing partners (until we can access the GHIN database)
+
+## Individual Handicap 
+
+  1. Regular:
+  courseHandicap = (handicapIndex * slopeRating) / 113 + (courseRating - par)
+
+  2. Individual Handicap with % Adjustment (Optional):
+  adjustedHandicap = courseHandicap * (percentage / 100)
+
+  3. Team Handicap (Stroke Play or Stableford)
+  
+  Common formulas:
+
+  Best Ball (2-person):
+  Team Handicap = 90% of the lower + 50% of the higher
+  (or adjust both with 85%/90%, depending on competition level)
+
+  Scramble (example 4-person):
+  Team Handicap = (A + B + C + D) / 4 * percentage
+
+  You can optionally allow the user to set team formulas or percentages per format.
+
+  4. 4. Match Play & Points Games Handicap Use
+
+  Match Play: Use full course handicap difference between players.
+
+  The lowest handicap player plays at scratch.
+
+  Others get the difference in strokes on the hardest holes.
+
+  Vegas, Wolf, Stableford: Use full or adjusted handicap.
+
+  Often apply full stroke allocations.
+
+  Optionally apply % adjustment before point conversions.
+
+
+## ARCHITECTURE 
+
+interface Player {
+  id: string;
+  name: string;
+  handicapIndex: number;
+  scores: (number | null)[];
+}
+
+interface Hole {
+  number: number;
+  par: number;
+  handicapRank: number; // 1–18
+}
+
+interface CourseInfo {
+  slopeRating: number;
+  courseRating: number;
+  par: number;
+}
+
+interface GameSettings {
+  handicapPercent?: number; // e.g. 80 for 80%
+  isMatchPlay?: boolean;
+  teamMode?: 'bestBall' | 'scramble' | 'aggregate';
+  teamHandicapPercent?: number; // optional for team play
+}
+
+
+### UTILITY FUNCTIONS
+
+function calculateCourseHandicap(
+  handicapIndex: number,
+  course: CourseInfo,
+  percent = 100
+): number {
+  const base = (handicapIndex * course.slopeRating) / 113;
+  const courseAdj = base + (course.courseRating - course.par);
+  return Math.round(courseAdj * (percent / 100));
+}
+
+function distributeStrokesOverHoles(
+  courseHandicap: number,
+  holes: Hole[]
+): number[] {
+  // Rank holes by difficulty (handicapRank ascending)
+  const sorted = [...holes].sort((a, b) => a.handicapRank - b.handicapRank);
+  const allocation = new Array(holes.length).fill(0);
+
+  for (let i = 0; i < courseHandicap; i++) {
+    const index = i % holes.length;
+    const hole = sorted[index];
+    allocation[hole.number - 1] += 1;
+  }
+
+  return allocation;
+}
