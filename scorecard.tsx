@@ -1,3 +1,10 @@
+interface Player {
+  id: string;
+  name: string;
+  scores: (number | null)[];
+  handicap: number; // total handicap for net score calculation
+}
+
 import React from 'react';
 
 interface Player {
@@ -8,15 +15,20 @@ interface Player {
 
 interface ScorecardProps {
   players: Player[];
-  handicaps: number[]; // Array of 18 numbers, one per hole
+  handicaps: number[]; // 18 values
   onScoreChange: (playerId: string, holeIndex: number, newScore: number) => void;
 }
 
 const Scorecard: React.FC<ScorecardProps> = ({ players, handicaps, onScoreChange }) => {
   const holes = Array.from({ length: 18 }, (_, i) => i + 1);
 
-  const getTotalScore = (scores: (number | null)[]) =>
-    scores.reduce((sum, score) => sum + (score ?? 0), 0);
+  const getOutScore = (scores: (number | null)[]) =>
+    scores.slice(0, 9).reduce((sum, score) => sum + (score ?? 0), 0);
+
+  const getInScore = (scores: (number | null)[]) =>
+    scores.slice(9).reduce((sum, score) => sum + (score ?? 0), 0);
+
+  const getTotal = (scores: (number | null)[]) => getOutScore(scores) + getInScore(scores);
 
   return (
     <div className="overflow-auto p-4 bg-gray-100 min-h-screen">
@@ -31,19 +43,19 @@ const Scorecard: React.FC<ScorecardProps> = ({ players, handicaps, onScoreChange
               <tr className="bg-gray-200 text-gray-700">
                 <th className="p-2 border text-left">Player</th>
                 {holes.map((hole) => (
-                  <th key={hole} className="p-2 border text-center">
-                    {hole}
-                  </th>
+                  <th key={hole} className="p-2 border text-center">{hole}</th>
                 ))}
+                <th className="p-2 border text-center">Out</th>
+                <th className="p-2 border text-center">In</th>
                 <th className="p-2 border text-center">Total</th>
               </tr>
               <tr className="bg-gray-50 text-xs text-gray-500">
                 <th className="p-2 border text-left">Handicap</th>
                 {handicaps.map((hcp, idx) => (
-                  <td key={idx} className="p-1 border text-center">
-                    {hcp}
-                  </td>
+                  <td key={idx} className="p-1 border text-center">{hcp}</td>
                 ))}
+                <td className="p-1 border text-center">–</td>
+                <td className="p-1 border text-center">–</td>
                 <td className="p-1 border text-center">–</td>
               </tr>
             </thead>
@@ -66,9 +78,9 @@ const Scorecard: React.FC<ScorecardProps> = ({ players, handicaps, onScoreChange
                       />
                     </td>
                   ))}
-                  <td className="p-1 border text-center font-semibold">
-                    {getTotalScore(player.scores)}
-                  </td>
+                  <td className="p-1 border text-center font-semibold">{getOutScore(player.scores)}</td>
+                  <td className="p-1 border text-center font-semibold">{getInScore(player.scores)}</td>
+                  <td className="p-1 border text-center font-semibold">{getTotal(player.scores)}</td>
                 </tr>
               ))}
             </tbody>
@@ -80,3 +92,4 @@ const Scorecard: React.FC<ScorecardProps> = ({ players, handicaps, onScoreChange
 };
 
 export default Scorecard;
+
